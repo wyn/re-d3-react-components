@@ -32,14 +32,6 @@ module D3 = {
   [@bs.send] external bandwidth: (ScaleBand.t, unit) => 'thing = "bandwidth";
 };
 
-type datum = {
-  id: int,
-  date: string,
-  value: int,
-};
-
-type data = array(datum);
-
 type margin = {
   top: int,
   right: int,
@@ -134,7 +126,7 @@ module Bar = {
   [@react.component]
   let make =
       (
-        ~datum: datum,
+        ~datum: Data.datum,
         ~width: int,
         ~height: int,
         ~xScale: D3.ScaleBand.t,
@@ -201,7 +193,7 @@ module Bars = {
   [@react.component]
   let make =
       (
-        ~data: data,
+        ~data: Data.data,
         ~width: int,
         ~height: int,
         ~xScale: D3.ScaleBand.t,
@@ -227,7 +219,7 @@ module Bars = {
 
 module Svg = {
   [@react.component]
-  let make = (~svgHeight: int, ~svgWidth: int, ~data: data) => {
+  let make = (~svgHeight: int, ~svgWidth: int, ~data: Data.data) => {
     let margin = {top: 20, right: 20, bottom: 30, left: 40};
     let width = svgWidth - margin.left - margin.right;
     let height = svgHeight - margin.top - margin.bottom;
