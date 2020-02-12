@@ -1,1 +1,1 @@
-ReactDOMRe.renderToElementWithId(<Demo />, "root");
+ReactDOMRe.renderToElementWithId(<BarChart />, "root");
