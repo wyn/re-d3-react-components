@@ -58,7 +58,7 @@ let data: data = [|
   {id: 50, date: "6/8/2018", value: 25},
 |];
 
-[@bs.module "Math"] external random: unit => float = "random";
+[@bs.val] [@bs.scope "Math"] external random: unit => float = "random";
 
 let getData: unit => data =
   () => {
