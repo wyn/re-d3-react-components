@@ -1,18 +1,18 @@
-# Basic Reason Template
+# Reason React with D3 BarChart
 
-Hello! This project allows you to quickly get started with Reason and BuckleScript. If you wanted a more sophisticated version, try the `react` template (`bsb -theme react -init .`).
+This is a simple port of https://github.com/alexzywiak/d3-react-components into ReasonReact with D3.
 
-# Build
-```
-npm run build
-```
+Just done the basic barchart with changing data.
+
 
 # Build + Watch
 
 ```
-npm run start
+yarn run start
 ```
 
+# Web server
 
-# Editor
-If you use `vscode`, Press `Windows + Shift + B` it will build automatically
+```
+yarn run server
+```
