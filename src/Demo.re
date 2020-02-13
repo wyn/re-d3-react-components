@@ -1,4 +1,6 @@
 /*
+ following from https://blog.bitsrc.io/implementing-react-life-cycles-using-reason-react-hooks-3c1d25de534c
+
  React lifecycle methods fall into the following categories:
     Initialization
     Mounting
@@ -164,19 +166,18 @@ module ComponentWillUnmount = {
 let make = () => {
   let (name, setName) = React.useState(() => "boo");
   <div>
-
-      <button
-        onClick={_ =>
-          setName(n =>
-            if (n === "boo") {
-              "componentDidUpdate";
-            } else {
-              "boo";
-            }
-          )
-        }>
-        <ComponentDidUpdate name />
-      </button>
-    </div>;
-    /* <ComponentWillUnmount /> </div>; */
+    <button
+      onClick={_ =>
+        setName(n =>
+          if (n === "boo") {
+            "componentDidUpdate";
+          } else {
+            "boo";
+          }
+        )
+      }>
+      <ComponentDidUpdate name />
+    </button>
+  </div>;
+  /* <ComponentWillUnmount /> </div>; */
 };
